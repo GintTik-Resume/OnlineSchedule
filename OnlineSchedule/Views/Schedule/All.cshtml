@@ -1,0 +1,20 @@
+<div class="schedules">
+    <div class="main__header">
+        <h1 class="title">Мої розклади</h1>
+    </div>
+    <div class="list">
+        @for(int i = 0; i < 5; i++)
+        {
+            <div class="list__item">
+                <a asp-action="Index"><h3 class="title link-dark">Назва розкладу</h3></a>
+                <div class="btn-group list__item-left">
+                    <div class="btn btn-secondary">залишити</div>
+                    <div class="btn btn-secondary">видалити</div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="schedules__btn">
+        <a asp-action="Add" class="btn btn-primary">додати новий розклад</a>
+    </div>
+</div>

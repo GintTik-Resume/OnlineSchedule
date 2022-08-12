@@ -7,8 +7,9 @@ builder.Services.AddMvc();
 var app = builder.Build();
 
 
-app.UseRouting(); // используем систему маршрутизации
+app.UseStaticFiles();
 
+app.UseRouting(); 
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(

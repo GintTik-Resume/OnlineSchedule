@@ -21,3 +21,4 @@ D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule\obj\Deb
 D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule\obj\Debug\net6.0\ref\OnlineSchedule.dll
 D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule\obj\Debug\net6.0\OnlineSchedule.pdb
 D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule\obj\Debug\net6.0\OnlineSchedule.genruntimeconfig.cache
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule\bin\Debug\net6.0\OnlineSchedule.staticwebassets.runtime.json
