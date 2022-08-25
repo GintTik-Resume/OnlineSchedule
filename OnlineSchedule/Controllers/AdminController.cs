@@ -2,7 +2,6 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using OnlineSchedule.BusinessLogic.History;
 using OnlineSchedule.BusinessLogic.Mappers;
 using OnlineSchedule.BusinessLogic.Services;
 using OnlineSchedule.Data.Entities;
@@ -15,19 +14,17 @@ namespace OnlineSchedule.Controllers
     {
         private readonly UserService _userService;
         private readonly Mapper _mapper;
-        private readonly HistoryLogger _logger;
 
-        public AdminController(UserService userService, Mapper mapper, HistoryLogger logger)
+        public AdminController(UserService userService, Mapper mapper)
         {
             _userService = userService;
             _mapper = mapper;
-            _logger = logger;
         }
 
         public IActionResult Index()
         {
             var users = _userService.GetUsers();
-            var models = _mapper.MapUsersToUserShortDatas(users, _userService);
+            var models = _mapper.Map<List<UserShortDataViewModel>>(users);
 
             return View(models);
         }
@@ -49,7 +46,6 @@ namespace OnlineSchedule.Controllers
             if (result.Succeeded)
             {
                 var performer = _userService.GetUser(HttpContext.User);
-                _logger.LogUser(performer.Id, user.Id, "add");
                 return RedirectToAction("Index");
             }
 

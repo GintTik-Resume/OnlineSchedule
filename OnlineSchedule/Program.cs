@@ -8,7 +8,6 @@ using OnlineSchedule.BusinessLogic.Mappers;
 using OnlineSchedule.BusinessLogic.Authenticate;
 using OnlineSchedule.BusinessLogic.Services;
 using AutoMapper;
-using OnlineSchedule.BusinessLogic.History;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,22 +30,18 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
         }).AddEntityFrameworkStores<ScheduleContext>();
 
 //builder.Services.AddAutoMapper(typeof(MappingProfile)); чомусь не робить, вирішити чому!
-builder.Services.AddTransient<Mapper>(_ => new MapperFactory().Create());
+builder.Services.AddTransient<Mapper>(provider => new MapperFactory(provider).Create());
 
 
 // ============================================
 
 builder.Services.AddTransient<Authenticator>();
 builder.Services.AddTransient<UserService>();
-builder.Services.AddTransient<HistoryLogger>();
 
 builder.Services.AddTransient<IScheduleRepository, ScheduleRepository>();
 builder.Services.AddTransient<IDayRepository, DayRepository>();
 builder.Services.AddTransient<ILessonRepository, LessonRepository>();
 builder.Services.AddTransient<ICommentRepository, CommentRepository>();
-builder.Services.AddTransient<IHistoryUserRepository, HistoryUserRepository>();
-builder.Services.AddTransient<IHistoryScheduleRepository, HistoryScheduleRepository>();
-builder.Services.AddTransient<ITypeOfActionRepository, TypeOfActionRepository>();
 
 // ============================================ 
 

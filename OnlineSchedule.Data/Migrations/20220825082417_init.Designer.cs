@@ -12,7 +12,7 @@ using OnlineSchedule.Data.Contexts;
 namespace OnlineSchedule.Data.Migrations
 {
     [DbContext(typeof(ScheduleContext))]
-    [Migration("20220822190856_init")]
+    [Migration("20220825082417_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -155,6 +155,53 @@ namespace OnlineSchedule.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("OnlineSchedule.Data.Entities.Comment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DateOfCreation")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateOfRemoved")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("FixedPosition")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsFixed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("NegativeRating")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PositiveRating")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("ScheduleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ScheduleId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Comment");
                 });
 
             modelBuilder.Entity("OnlineSchedule.Data.Entities.Day", b =>
@@ -380,6 +427,25 @@ namespace OnlineSchedule.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("OnlineSchedule.Data.Entities.Comment", b =>
+                {
+                    b.HasOne("OnlineSchedule.Data.Entities.Schedule", "Schedule")
+                        .WithMany("Comments")
+                        .HasForeignKey("ScheduleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OnlineSchedule.Data.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Schedule");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("OnlineSchedule.Data.Entities.Day", b =>
                 {
                     b.HasOne("OnlineSchedule.Data.Entities.Schedule", "Schedule")
@@ -420,6 +486,8 @@ namespace OnlineSchedule.Data.Migrations
 
             modelBuilder.Entity("OnlineSchedule.Data.Entities.Schedule", b =>
                 {
+                    b.Navigation("Comments");
+
                     b.Navigation("Days");
                 });
 

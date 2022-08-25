@@ -1,5 +1,6 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using OnlineSchedule.BusinessLogic.Services;
 using OnlineSchedule.Data.Entities;
 using OnlineSchedule.Data.Repositories.Interfaces;
 using OnlineSchedule.Presentation.ViewModels;
@@ -10,11 +11,13 @@ namespace OnlineSchedule.Controllers
     {
         private readonly IScheduleRepository _rep;
         private readonly Mapper _mapper;
+        private readonly UserService _userService;
 
-        public ScheduleController(IScheduleRepository rep, Mapper mapper)
+        public ScheduleController(IScheduleRepository rep, Mapper mapper, UserService userService)
         {
             _rep = rep;
             _mapper = mapper;
+            _userService = userService;
         }
 
         public IActionResult Index(Guid id)
@@ -30,8 +33,11 @@ namespace OnlineSchedule.Controllers
 
         public IActionResult All()
         {
-            //var schedules = _schedules.GetByUser();
-            return View();
+            var user = _userService.GetUser(HttpContext.User);
+            var schedules = _rep.GetByUserId(user.Id);
+            var models = _mapper.Map<List<ScheduleListItem>>(schedules);
+
+            return View(models);
         }
 
         public IActionResult Add() 

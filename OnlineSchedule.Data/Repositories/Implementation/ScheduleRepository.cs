@@ -24,7 +24,7 @@ namespace OnlineSchedule.Data.Repositories.Implementation
             return _context.Schedules.FirstOrDefault(o => o.Id == id);
         }
 
-        public List<Schedule> GetByUser(string userId)
+        public List<Schedule> GetByUserId(string userId)
         {
             return _context.Schedules.Where(o => o.UserId == userId).ToList();
         }

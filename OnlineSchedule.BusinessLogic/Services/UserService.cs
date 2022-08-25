@@ -28,13 +28,13 @@ namespace OnlineSchedule.BusinessLogic.Services
             return _userManager.GetUserAsync(principal).GetAwaiter().GetResult();
         }
 
-        public List<string> GetUserRole(ClaimsPrincipal principal)
+        public List<string> GetUserRoles(ClaimsPrincipal principal)
         {
             var user = GetUser(principal);
-            return GetUserRole(user);
+            return GetUserRoles(user);
         }
 
-        public List<string> GetUserRole(User user)
+        public List<string> GetUserRoles(User user)
         {
             if (user == null)
                 return new List<string>();
@@ -44,7 +44,7 @@ namespace OnlineSchedule.BusinessLogic.Services
 
         public bool ExistsRole(ClaimsPrincipal principal, string rolesName)
         {
-            var roles = GetUserRole(principal);
+            var roles = GetUserRoles(principal);
 
             foreach (var roleName in rolesName.Replace(" ", "").Split(","))
                 if (roles.Contains(roleName) == true)
