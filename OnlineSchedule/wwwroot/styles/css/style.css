@@ -186,8 +186,10 @@ h3.title {
   width: 100%;
   margin-bottom: 10px;
 }
-.form__error {
+.form__errors li {
+  list-style: none;
   padding: 8px 16px;
+  margin-bottom: 5px;
   font-size: 1rem;
   line-height: 1.1;
   border: 3px solid #F66F6F;
@@ -210,11 +212,16 @@ h3.title {
 .input:focus {
   box-shadow: 0 0 0 3px #77CDA4 inset;
 }
-.input-group {
+.input-row {
   display: flex;
 }
-.input-group > .input:not(:last-child) {
+.input-row > .input:not(:last-child) {
   margin-right: 10px;
+}
+.input-group > *:not(:first-child) {
+  display: block;
+  margin-top: 5px;
+  margin-left: 3px;
 }
 .input--hide {
   display: none;

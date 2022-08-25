@@ -1,0 +1,15 @@
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\bin\Debug\net6.0\OnlineSchedule.Presentation.deps.json
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\bin\Debug\net6.0\OnlineSchedule.Presentation.dll
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\bin\Debug\net6.0\ref\OnlineSchedule.Presentation.dll
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\bin\Debug\net6.0\OnlineSchedule.Presentation.pdb
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\obj\Debug\net6.0\OnlineSchedule.Presentation.csproj.AssemblyReference.cache
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\obj\Debug\net6.0\OnlineSchedule.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\obj\Debug\net6.0\OnlineSchedule.Presentation.AssemblyInfoInputs.cache
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\obj\Debug\net6.0\OnlineSchedule.Presentation.AssemblyInfo.cs
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\obj\Debug\net6.0\OnlineSchedule.Presentation.csproj.CoreCompileInputs.cache
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\obj\Debug\net6.0\OnlineSchedule.Presentation.dll
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\obj\Debug\net6.0\ref\OnlineSchedule.Presentation.dll
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\obj\Debug\net6.0\OnlineSchedule.Presentation.pdb
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\bin\Debug\net6.0\OnlineSchedule.Data.dll
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\bin\Debug\net6.0\OnlineSchedule.Data.pdb
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Presentation\obj\Debug\net6.0\OnlineSchedule.Presentation.csproj.CopyComplete

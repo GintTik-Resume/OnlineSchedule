@@ -1,3 +1,6 @@
+@inject OnlineSchedule.BusinessLogic.Authenticate.Authenticator _authenticator
+@inject OnlineSchedule.BusinessLogic.Services.UserService _userService
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -16,13 +19,34 @@
         </a>
         <nav class="navbar header__navbar">
             <a asp-controller="Home" asp-action="Index" class="navbar__item navbar__item--active">Головна</a>
-            <a asp-controller="Schedule" asp-action="All" class="navbar__item">Мої розклади</a>
-            <a asp-controller="Moderator" asp-action="Index" class="navbar__item">Для модератора</a>
-            <a asp-controller="Admin" asp-action="Index" class="navbar__item">Для адміністратора</a>
+            
+            @if (_userService.GetUser(Context.User) != null)
+            {
+                <a asp-controller="Schedule" asp-action="All" class="navbar__item">Мої розклади</a>
+            }
+
+            @if (_userService.ExistsRole(Context.User, "Moderator, Admin"))
+            {
+                <a asp-controller="Moderator" asp-action="Index" class="navbar__item">Для модератора</a>
+            }
+
+            @if (_userService.ExistsRole(Context.User, "Admin"))
+            {
+                <a asp-controller="Admin" asp-action="Index" class="navbar__item">Для адміністратора</a>
+            }
         </nav>
         <div class="account btn-group header__account">
-            <a asp-controller="Auth" asp-action="Login" class="btn btn-secondary">вхід</a>
-            <a asp-controller="Auth" asp-action="Registration" class="btn btn-primary">реєстрація</a>
+
+            @if (_authenticator.IsAuthorized(Context.User) == false)
+            {
+                <a asp-controller="Auth" asp-action="Login" class="btn btn-secondary">вхід</a>
+                <a asp-controller="Auth" asp-action="Registration" class="btn btn-primary">реєстрація</a>
+            }
+            else
+            {
+                <div class="btn btn-primary">@Context.User.Identity.Name</div>
+                <a asp-controller="Auth" asp-action="Logout" class="btn btn-secondary">вихід</a>
+            }
         </div>
     </header>
 

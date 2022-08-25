@@ -5,7 +5,27 @@
       "ProjectGuid": "d405f06b-a5e0-4349-98d5-7e9584bed58c",
       "DisplayName": "OnlineSchedule",
       "ColorIndex": 0
+    },
+    "2adf2e58-0c36-4642-b22c-61eaa862aadc": {
+      "ProjectGuid": "2adf2e58-0c36-4642-b22c-61eaa862aadc",
+      "DisplayName": "OnlineSchedule.Data",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    },
+    "06c5f3a1-f6d6-4778-b2a2-a859a23ac44b": {
+      "ProjectGuid": "06c5f3a1-f6d6-4778-b2a2-a859a23ac44b",
+      "DisplayName": "OnlineSchedule.BusinessLogic",
+      "ColorIndex": 2
+    },
+    "02275676-f6db-4d42-af98-2c892ffe965a": {
+      "ProjectGuid": "02275676-f6db-4d42-af98-2c892ffe965a",
+      "DisplayName": "OnlineSchedule.Presentation",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 4
 }

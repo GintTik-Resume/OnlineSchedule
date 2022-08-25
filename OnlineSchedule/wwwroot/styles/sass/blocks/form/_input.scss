@@ -17,11 +17,19 @@
         box-shadow: 0 0 0 3px $primary inset;
     }
 
-    &-group {
+    &-row {
         display: flex;
 
         & > .input:not(:last-child) {
             margin-right: 10px;
+        }
+    }
+
+    &-group {
+        & > *:not(:first-child) {
+            display: block;
+            margin-top: 5px;
+            margin-left: 3px; 
         }
     }
 

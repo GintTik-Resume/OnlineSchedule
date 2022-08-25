@@ -1,0 +1,14 @@
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\bin\Debug\net6.0\OnlineSchedule.Data.deps.json
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\bin\Debug\net6.0\OnlineSchedule.Data.runtimeconfig.json
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\bin\Debug\net6.0\OnlineSchedule.Data.dll
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\bin\Debug\net6.0\ref\OnlineSchedule.Data.dll
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\bin\Debug\net6.0\OnlineSchedule.Data.pdb
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\obj\Debug\net6.0\OnlineSchedule.Data.csproj.AssemblyReference.cache
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\obj\Debug\net6.0\OnlineSchedule.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\obj\Debug\net6.0\OnlineSchedule.Data.AssemblyInfoInputs.cache
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\obj\Debug\net6.0\OnlineSchedule.Data.AssemblyInfo.cs
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\obj\Debug\net6.0\OnlineSchedule.Data.csproj.CoreCompileInputs.cache
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\obj\Debug\net6.0\OnlineSchedule.Data.dll
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\obj\Debug\net6.0\ref\OnlineSchedule.Data.dll
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\obj\Debug\net6.0\OnlineSchedule.Data.pdb
+D:\Програмування\vs2022 repos\OnlineSchedule\OnlineSchedule.Data\obj\Debug\net6.0\OnlineSchedule.Data.genruntimeconfig.cache
